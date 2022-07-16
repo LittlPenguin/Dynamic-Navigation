@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?ai1may');
+    src: url('../fonts/icomoon.eot?ai1may#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?ai1may') format('truetype'),
+        url('../fonts/icomoon.woff?ai1may') format('woff'),
+        url('../fonts/icomoon.svg?ai1may#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+:root {
+    --clr: #393939;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+.navigation {
+    width: 600px;
+    height: 70px;
+    background-color: aliceblue;
+    /* overflow: hidden; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 550px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    /* background-color: royalblue; */
+}
+
+.navigation ul li a span[class^=icon] {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 24px;
+    text-align: center;
+    transition: all 0.7s;
+    color: var(--clr);
+}
+
+.navigation ul li.active a span[class^=icon] {
+    transform: translateY(-32px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all .7s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator {
+    position: absolute;
+    top: -50%;
+    left: -80px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--clr);
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: all 0.7s;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 20px;
+    background-color: transparent;
+    box-shadow: 1px -10px 0px 0px var(--clr);
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    border-top-left-radius: 20px;
+    background-color: transparent;
+    /* background-color: skyblue; */
+    box-shadow: -1px -10px 0px 0px var(--clr);
+}
+
+a {
+    text-decoration: none;
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(100px);
+    background-color: rgb(174, 206, 191);
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(160px);
+    background-color: yellow;
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(221px);
+    background-color: greenyellow;
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(282px);
+    background-color: rgb(167, 36, 167);
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(343px);
+    background-color: rgb(236, 75, 75);
+}
+
+.navigation ul li:nth-child(6).active~.indicator {
+    transform: translateX(404px);
+    background-color: skyblue;
+}
+
+.navigation ul li:nth-child(7).active~.indicator {
+    transform: translateX(465px);
+    background-color: rgb(155, 194, 111);
+}
+
+.navigation ul li:nth-child(8).active~.indicator {
+    transform: translateX(526px);
+    background-color: rgb(255, 111, 248);
+}
+
+.navigation ul li:nth-child(9).active~.indicator {
+    transform: translateX(587px);
+    background-color: rgb(181, 202, 199);
+}
+
+.icon1::after {
+    content: "\e900";
+    font-family: "icomoon";
+}
+
+.icon2::after {
+    content: "\e916";
+    font-family: "icomoon";
+}
+
+.icon3::after {
+    content: "\e9fe";
+    font-family: "icomoon";
+}
+
+.icon4::after {
+    content: "\e9f0";
+    font-family: "icomoon";
+}
+
+.icon5::after {
+    content: "\e9ee";
+    font-family: "icomoon";
+}
+
+.icon6::after {
+    content: "\e9fc";
+    font-family: "icomoon";
+}
+
+.icon7::after {
+    content: "\ea02";
+    font-family: "icomoon";
+}
+
+.icon8::after {
+    content: "\e9fa";
+    font-family: "icomoon";
+}
+
+.icon9::after {
+    content: "\e91f";
+    font-family: "icomoon";
+}
